@@ -54,9 +54,40 @@
   
  
  .main-container:hover img{
+    -transition: all 0.4s ease 0s;
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
     -o-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1);
   }
+  .divBusca{
+    align-items: flex-end;
+  }
+  #txtBusca{
+    float:left;
+    background-color:rgb(227, 238, 238);
+    padding-left:5px;
+    font-size:18px;
+    border:none;
+    height:32px;
+    width:226px;
+  }
+  
+  #btnBusca{
+    float:left;
+    cursor:pointer;
+  }
+  
+  #divBusca img{
+    float:left;
+  }
+  
+  #divBusca{
+    border:solid 10px rgba(21, 44, 44, 0.8);
+    border-radius:10px;
+    height:37px;
+    width:400px;
+  }
+
+  
