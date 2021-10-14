@@ -70,6 +70,35 @@ app.post("/criar", async (req, res) => {
     });
   }
 });
+app.get("/editar/:id", async (req, res) => {
+  const filme = await Filme.findByPk(req.params.id);
+
+  if (!filme) {
+    res.render("editar", {
+      mensagem: "Filme não encontrado!",
+    });
+  }
+
+  res.render("editar", {
+    filme,
+  });
+});
+app.post("/editar/:id", async (req, res) => {
+  const filme = await Filme.findByPk(req.params.id);
+
+  const { nome, descricao, imagem } = req.body;
+
+  filme.nome = nome;
+  filme.descricao = descricao;
+  filme.imagem = imagem;
+
+  const filmeEditado = await filme.save();
+
+  res.render("editar", {
+    filme: filmeEditado,
+    mensagemSucesso: "Filme editado com sucesso!",
+  });
+});
 
 app.listen(port, () =>
   console.log(`Servidor rodando em http://localhost:${port}`)

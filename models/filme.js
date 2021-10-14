@@ -6,7 +6,7 @@ const Filme = database.define("filmes", {
     autoIncrement: true,
     allowNull: false,
     primaryKey: true,
-    //primari key
+    
   },
   nome: {
     type: Sequelize.STRING,
