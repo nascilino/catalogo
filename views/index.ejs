@@ -14,43 +14,37 @@
    
     <header id= home>
       <div id=logotipo><center>
-        <a id="logo" href="#home"><img src="/img/logo.jpg" alt="Logo Image"></a></center>
+        <a id="logo" href="/index"><img src="/img/logo.png" alt="Logo Image"></a></center>
       </div>      
-      <div id="divBusca">
-        <img src="search3.png" alt=""/>
-        <input type="text" id="txtBusca" placeholder="Buscar..."/>
-        <img src="search4.png" alt="Buscar..." id="btnBusca"/>
-      </div>
-      <nav class="main-nav">                
-        <a href="#cadastro">Cadastrar</a>
-        <a href="#alterar">Alterar</a>
-        <a target="_blank" href=https://www.facebook.com/thiago.leao.737001>Portfolio</a>        
+            <nav class="main-nav">                
+        <a href="/criar">Cadastrar</a>
+            <a target="_blank" href=https://www.facebook.com/thiago.leao.737001>Portfolio</a>        
       </nav>
       
     </header>
   
-    
- 
-    <section class="main-container" >
-               <div class="box">
-                   
-                <section id= "filmes">
-                  <h3>Lista de Filmes:</h3>
-                  <% filmes.forEach(item => { %>
-                  <section class="card">
-                    <article id=mg1>
-                      <ul>
-                        <li><%item.id%></li>
-                        <li><%item.nome%></li>
-                        <li><%item.descricao%></li>
-                        <img src="<%item.imagem%>"width="200">
+  
+  <section id="filmes">
+      <h3>Lista de filmes:</h3>
+      <% filmes.forEach(item => { %>
+          <section class="card">
+           <article id="content">
+                  <ul>
+                    <span class="mg1">
+                      <li>Nome: <%= item.nome %></li>
+                      <li>Descrição: <%= item.descricao %></li>
+                      <a href="/detalhes/<%= item.id %>">
+                          <img src="<%= item.imagem %>" width=200>
+                      </a>
+                  </ul>
+              <a href = "/editar/<%= item.id %>">Editar</a>
+            </span>
+          </article>
+          </section>
+      <% }) %> 
+  </section>
 
-                      </ul>
-                    </article>
-                  </section>
-                  <%})%>
-                </section>
-               </div>
+               
             <!-- <a href=""><img class="mg1" src="https://br.web.img3.acsta.net/c_310_420/medias/nmedia/18/91/08/82/20128877.JPG" alt=""></a>
             <a href=""><img class="mg1" src="https://s2.glbimg.com/XB79hteOI21lG_EWJlZS_pU_1Ds=/top/e.glbimg.com/og/ed/f/original/2018/04/23/1_sJdmoN3.jpg" alt=""></a>
             <a href=""><img class="mg1"src="https://media.fstatic.com/7XemKYH1XtxN4MkKaVz1fYJpYp4=/290x478/smart/media/movies/covers/2011/07/f8503d117d5560c07478c1fde344a4e8.jpg" alt=""></a>
