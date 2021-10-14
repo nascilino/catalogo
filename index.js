@@ -21,6 +21,55 @@ app.get("/senha", (req, res) => {
 app.get("/cadastro", (req, res) => {
   res.render("cadastro");
 });
+app.get("/criar", (req, res) => {
+  res.render("criar");
+});
+app.post("/criar", async (req, res) => {
+  const { nome, descricao, imagem } = req.body;
+  
+  const filme = await Filme.create({
+    nome,
+    descricao,
+    imagem,
+  });
+
+  res.render("criar", {
+    filme,
+  });
+});
+app.post("/criar", async (req, res) => {
+  const { nome, descricao, imagem } = req.body;
+
+  if (!nome) {
+    res.render("criar", {
+      mensagem: "Nome é obrigatório",
+    });
+  }
+
+  if (!imagem) {
+    res.render("criar", {
+      mensagem: "Imagem é obrigatório",
+    });
+  }
+
+  try {
+    const filme = await Filme.create({
+      nome,
+      descricao,
+      imagem,
+    });
+
+    res.render("criar", {
+      filme,
+    });
+  } catch (err) {
+    console.log(err);
+
+    res.render("criar", {
+      mensagem: "Ocorreu um erro ao cadastrar o Filme!",
+    });
+  }
+});
 
 app.listen(port, () =>
   console.log(`Servidor rodando em http://localhost:${port}`)
