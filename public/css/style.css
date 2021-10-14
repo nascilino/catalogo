@@ -12,6 +12,7 @@
 }
 
 .card {
+  display: flexbox;
   border-radius: 5px;
   box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
   padding: 30px;
@@ -19,15 +20,18 @@
   width: 400px;
   transition: all 0.3s ease-out;
 }
+.mg1{
+  display: flexbox;
+}
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px);
   cursor: pointer;
 }
  
-/* .card p {
+.card p {
   color: #a3a5ae;
   font-size: 16px;
-} */
+}
  
 
  
