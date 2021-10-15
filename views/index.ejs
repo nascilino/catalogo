@@ -23,11 +23,27 @@
       </nav>
       
     </header>
+<body>
+    <section id="filmes">
+      <% filmes.forEach((item, index) => { %>
+          <a class= "card" href="/detalhes/<%= index %>">
+          <h2>
+              <%= item.nome %>
+          </h2>
+          <img src='<%= item.imagem %>'>
+          
+          <h3>
+              <%= item.detalhes %>
+          </h3>
+      <% }) %>
+      
+  </a>
+  </section>
   
-  
-  <section id="filmes">
+  <!-- <section id="filmes">
       <h3>Lista de filmes:</h3>
       <% filmes.forEach(item => { %>
+        <span id=teste>
           <section class="card">
                   <ul>
                     <li>Nome: <%= item.nome %></li>
@@ -38,8 +54,9 @@
                   </ul>
               <a href = "/editar/<%= item.id %>">Editar</a>
             </section>
+          </span>
       <% }) %> 
-  </section>
+  </section> -->
 
                
             <!-- <a href=""><img class="mg1" src="https://br.web.img3.acsta.net/c_310_420/medias/nmedia/18/91/08/82/20128877.JPG" alt=""></a>
@@ -53,10 +70,11 @@
                </section>
       
 
- 
+              </body>
+            
     <footer>
       <p>&copy 2021 Linoflix, Inc.</p>
-      <p>Thiago Lino & Maria Nascimento &copy 2021</p>
+      <p>Thiago Nascimento Lino & Maria Clara Nascimento &copy 2021</p>
     </footer>
   </div>
   
