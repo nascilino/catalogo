@@ -61,6 +61,7 @@ a.card h3 {
 }
 footer{
   color: cadetblue;
+  text-align: center;
 }
 section#filmes {
   margin-left: 10rem;
