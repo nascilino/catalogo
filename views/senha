@@ -23,6 +23,7 @@
       <nav class="main-nav">                
         <a href="#cadastro">Cadastrar</a>
         <a href="#alterar">Alterar</a>
+        <a href="/deletar">Deletar
             
       </nav>
       

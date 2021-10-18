@@ -19,12 +19,12 @@
             <nav class="main-nav">  
         <a href="/">Home</a>              
         <a href="/criar">Cadastrar</a>
-            <a target="_blank" href=https://www.facebook.com/thiago.leao.737001>Portfolio</a>        
+                   
       </nav>
       
     </header>
 <body>
-  <section id="cursos">
+  <section id="filmes">
     <h3>Lista de filmes:</h3>
 
         <section class="card">
@@ -37,16 +37,17 @@
                             <img src="<%= filme.imagem %>" width=200>
                         </a>
                     </ul>
-                   
+                
             </article>
-            
+            <a href="/deletar/<%= filme.id %>"><button>Deletar</button></a>
+            <a href="/editar/<%= filme.id %>"><button>Editar</button></a>
         </section>
 </section>
    
-<footer>
-  <p>&copy 2021 Linoflix, Inc.</p>
-  <p>Thiago Lino & Maria Nascimento &copy 2021</p>
-</footer>
+<footer><center>
+  <p>&copy 2021 Blue Filmes, Inc.</p>
+  <p>Thiago Nascimento Lino Leão & Maria Clara Nascimento Melo &copy 2021</p>
+</footer></center>
 </div>
 
 <script src="script.js"></script>

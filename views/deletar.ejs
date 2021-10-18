@@ -20,20 +20,13 @@
         <nav class="main-nav">   
         <a href="/">Home</a>                
         <a href="/criar">Cadastrar</a>
-      
-                       
+                     
       </nav>
     </header>
-      
-      <% if(message != "") {  %>
-        <section id="message">
-            <p><%= message %></p> <span id="close">&times;</span>
-        </section>
-      <% }  %>
-    
+         
     <section id="inscrever">
 
-        <form action="/editar/<%= filme.id %>" method="POST">
+        <form action="/deletar/<%= filme.id %>" method="POST">
             <div id=fr>
                 <label for="nome">Digite o nome do filme: </label>
                 <input type="text" name="nome" id="nome" placeholder="Nome do filme" value="<%= filme.nome %>">
@@ -49,8 +42,8 @@
                 <input type="text" name="imagem" id="imagem" placeholder="Link da imagem" value="<%= filme.imagem %>">
             </div>
         
-            <button type="submit">Editar</button>
-            
+            <!-- <button type="submit">Editar</button> -->
+            <button type="submit">Deletar</button>
         </form>
     </section>
 

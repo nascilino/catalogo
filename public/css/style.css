@@ -1,9 +1,11 @@
+
 /* .img{
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 } */
+
 header {
   display: flex;
   justify-content: space-around;
@@ -57,7 +59,9 @@ a.card h3 {
   padding: 1rem;
   color: #000;
 }
-
+footer{
+  color: cadetblue;
+}
 section#filmes {
   margin-left: 10rem;
   margin-right: 10rem;
@@ -96,15 +100,84 @@ html, body {
 }
 
 .main-nav a {
-  color: var(--light);
+  color:cadetblue;
   text-decoration: none;
   margin: 5px;  
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+nav {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  top: 0;
+}
+section#inscrever {
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #fff;
+  margin: 0 20rem 10rem 20rem;
+  box-shadow: 0 0 1rem #00000060;
+  border-radius: 1rem;
+}
+
+section#inscrever form {
+  width: 100%;
+  padding: 3rem;
+}
+
+section#inscrever form div input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  outline: none;
+  border: 0.1rem solid #ccc;
+}
+section#inscrever form div label {
+  font-size: 1.3rem;
+  color:cadetblue ;
 }
 
 
+section#inscrever form button {
+  border: 1px solid cadetblue;
+  background-color: #fff;
+  color:cadetblue;
+  padding: 1rem;
+  font-size: 0.8vw;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  display: block;
+  margin: auto;
+  margin-top: 2rem;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+  width: 40%;
+}
 
+section#detalhes{
+  margin: 0 20rem 0 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:#e6d9d9;
+  border-radius: 2rem;
+  padding: 3rem;
+  box-shadow: 0 0 1rem #00000060;
+}
 
-
-
-
-
+article#content ul li{
+ color: cadetblue;
+}
+.imagem{
+  display:flex ;
+  justify-content: center;
+}
+ 

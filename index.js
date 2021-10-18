@@ -92,6 +92,31 @@ app.post("/editar/:id", async (req, res) => {
 
   });
 });
+app.get("/deletar/:id", async (req, res) => {
+  const filme = await Filme.findByPk(req.params.id);
 
+  if (!filme) {
+    res.render("deletar", {
+      mensagem: "Filme não encontrado!",
+    });
+  }
+
+  res.render("deletar", {
+    filme,message
+  });
+});
+app.post("/deletar/:id", async (req, res) => {
+  const filme = await Filme.findByPk(req.params.id);
+
+  if (!filme) {
+    res.render("deletar", {
+      mensagem: "Filme não encontrado!",
+    });
+  }
+
+  await filme.destroy();
+
+  res.redirect("/");
+});
 
 app.listen(port, () => console.log(`Servidor rodando em http://localhost:${port}`))
