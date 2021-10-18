@@ -1,3 +1,12 @@
+DB_BASE = Filmes
+DB_USER = postgres
+DB_PASS = tea190723 
+DB_HOST = localhost
+DB_BASE = d9ghqgfdslj5is
+DB_USER = kztrusqvjgcoyu
+DB_PASS = cb0579c7d6999b0c6f50bc8b532ed4ec44d3d243b14118d263d5cacb294bf8ca 
+DB_HOST = ec2-35-170-123-64.compute-1.amazonaws.com
+
 <!DOCTYPE html>
 <html lang="pt-BR">
   <meta charset="utf-8" />
