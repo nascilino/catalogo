@@ -48,7 +48,7 @@ a.card h2 {
   width: 100%;
   text-align: center;
   padding: 2rem;
-  color: #000;
+  color: cadetblue;
 }
 
 a.card h3 {
@@ -100,7 +100,8 @@ body {
   text-decoration: none;
   margin: 5px;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
+  padding: 0,5rem;
 }
 nav {
   background-color: #fff;
