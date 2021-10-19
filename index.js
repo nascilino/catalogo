@@ -1,5 +1,5 @@
 const express = require("express");
-require("dotenv").config()
+require("dotenv").config();
 const path = require("path");
 const app = express();
 require("dotenv").config();
@@ -9,13 +9,14 @@ app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 let message = "";
 const Filme = require("./models/filme");
-let message2=""
+
 app.get("/", async (req, res) => {
   const filmes = await Filme.findAll();
   res.render("index", {
     filmes,
   });
-});app.get("/detalhes/:id", async (req, res) => {
+});
+app.get("/detalhes/:id", async (req, res) => {
   const filme = await Filme.findByPk(req.params.id);
 
   res.render("detalhes", {
@@ -24,9 +25,8 @@ app.get("/", async (req, res) => {
 });
 
 app.get("/criar", (req, res) => {
-  res.render("criar", {message});
+  res.render("criar", { message });
 });
-
 
 app.post("/criar", async (req, res) => {
   const { nome, descricao, imagem } = req.body;
@@ -35,15 +35,11 @@ app.post("/criar", async (req, res) => {
     res.render("criar", {
       message: "Nome é obrigatório",
     });
-  }
-
-  else if (!imagem) {
+  } else if (!imagem) {
     res.render("criar", {
       message: "Imagem é obrigatório",
     });
-  }
-
-  else {
+  } else {
     try {
       const filme = await Filme.create({
         nome,
@@ -72,7 +68,8 @@ app.get("/editar/:id", async (req, res) => {
   }
 
   res.render("editar", {
-    filme, message
+    filme,
+    message,
   });
 });
 
@@ -90,7 +87,6 @@ app.post("/editar/:id", async (req, res) => {
   res.render("editar", {
     filme: filmeEditado,
     message: "Filme editado com sucesso!",
-
   });
 });
 app.get("/deletar/:id", async (req, res) => {
@@ -103,7 +99,8 @@ app.get("/deletar/:id", async (req, res) => {
   }
 
   res.render("deletar", {
-    filme,message
+    filme,
+    message,
   });
 });
 app.post("/deletar/:id", async (req, res) => {
@@ -120,4 +117,6 @@ app.post("/deletar/:id", async (req, res) => {
   res.redirect("/");
 });
 
-app.listen(port, () => console.log(`Servidor rodando em http://localhost:${port}`))
+app.listen(port, () =>
+  console.log(`Servidor rodando em http://localhost:${port}`)
+);
