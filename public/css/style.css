@@ -173,7 +173,7 @@ button{
   outline: none;
   width: 80px;
   color:rgb(116, 105, 105);
-  border-radius: 10px;
+  border-radius: 20px;
   cursor: pointer;
   margin: 5px;
 }
