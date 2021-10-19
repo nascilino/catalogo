@@ -9,7 +9,7 @@ app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 let message = "";
 const Filme = require("./models/filme");
-
+let message2=""
 app.get("/", async (req, res) => {
   const filmes = await Filme.findAll();
   res.render("index", {
